@@ -1,20 +1,23 @@
+import os
+
+
 class CountryLookup:
     countryCodes = []
     countryTable = []
     ipRanges = []
 
-    def __init__(self) -> None:
-        with open("./data/ip_supalite.table", mode="rb") as file:
+    def __init__(self):
+        datafile = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'data', 'ip_supalite.table')
+        with open(datafile, mode="rb") as file:
             self.ipSupalite = file.read()
         self.processTable()
 
-    def processTable(self) -> None:
+    def processTable(self):
         index = 0
         for ii in range(256):
             c1 = self.ipSupalite[index]
             c2 = self.ipSupalite[index + 1]
             index += 2
-
             self.countryTable.append(chr(c1) + chr(c2))
             if chr(c1) == "*":
                 break
@@ -40,6 +43,8 @@ class CountryLookup:
 
             lastEndRange += count * 256
             cc = self.ipSupalite[index]
+            if cc == '':
+                break
             index += 1
 
             self.ipRanges.append(lastEndRange)

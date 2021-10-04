@@ -237,7 +237,7 @@ def expectedSequenceTest():
 
         failed = False
         if expected == actual:
-            print(".", end="")
+            print('.', end="")
         else:
             failed = True
             print(f"F: {expected}/{actual}")
@@ -248,5 +248,5 @@ def expectedSequenceTest():
     else:
         print("ALL TESTS PASSED")
 
-
-expectedSequenceTest()
+if __name__ == '__main__':
+    expectedSequenceTest()
