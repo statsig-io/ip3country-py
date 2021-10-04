@@ -248,5 +248,5 @@ def expectedSequenceTest():
     else:
         print("ALL TESTS PASSED")
 
-
-expectedSequenceTest()
+if __name__ == '__main__':
+    expectedSequenceTest()
