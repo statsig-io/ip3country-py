@@ -237,7 +237,7 @@ def expectedSequenceTest():
 
         failed = False
         if expected == actual:
-            print('.', end="")
+            print(".", end="")
         else:
             failed = True
             print(f"F: {expected}/{actual}")

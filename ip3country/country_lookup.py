@@ -1,6 +1,5 @@
 import os
 
-
 class CountryLookup:
     countryCodes = []
     countryTable = []
@@ -43,8 +42,6 @@ class CountryLookup:
 
             lastEndRange += count * 256
             cc = self.ipSupalite[index]
-            if cc == '':
-                break
             index += 1
 
             self.ipRanges.append(lastEndRange)
