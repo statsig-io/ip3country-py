@@ -1,11 +1,10 @@
 import os
 
 class CountryLookup:
-    countryCodes = []
-    countryTable = []
-    ipRanges = []
-
     def __init__(self):
+        self.countryCodes = []
+        self.countryTable = []
+        self.ipRanges = []
         datafile = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'data', 'ip_supalite.table')
         with open(datafile, mode="rb") as file:
             self.ipSupalite = file.read()
