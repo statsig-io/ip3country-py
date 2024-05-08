@@ -1,9 +1,11 @@
 import os
+from typing import List
+
 
 class CountryLookup:
-    countryCodes = []
-    countryTable = []
-    ipRanges = []
+    countryCodes: List[str] = []
+    countryTable: List[str] = []
+    ipRanges: List[int] = []
 
     def __init__(self):
         datafile = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'data', 'ip_supalite.table')
