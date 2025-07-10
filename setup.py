@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name='ip3country',
-    version='0.3.0',
+    version='0.4.0',
     url='https://github.com/statsig-io/ip3country-py',
     author='Statsig',
     author_email='tore@statsig.com',
