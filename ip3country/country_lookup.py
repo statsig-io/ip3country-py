@@ -3,11 +3,10 @@ from typing import List
 
 
 class CountryLookup:
-    countryCodes: List[str] = []
-    countryTable: List[str] = []
-    ipRanges: List[int] = []
-
     def __init__(self):
+        self.countryCodes: List[str] = []
+        self.countryTable: List[str] = []
+        self.ipRanges: List[int] = []
         datafile = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'data', 'ip_supalite.table')
         with open(datafile, mode="rb") as file:
             self.ipSupalite = file.read()
