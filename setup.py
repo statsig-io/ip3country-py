@@ -5,7 +5,7 @@ setuptools.setup(
     version='0.4.0',
     url='https://github.com/statsig-io/ip3country-py',
     author='Statsig',
-    author_email='tore@statsig.com',
+    author_email='support@statsig.com',
     description='A zero-dependency, local, fast, tiny ip-address to country lookup',
     long_description="See https://github.com/statsig-io/ip3country-py",
     long_description_content_type="text/markdown",
